@@ -7,5 +7,10 @@ pipeline {
                 echo 'Iniciando a pipeline'
             }
         }
+        stage('Restore packages'){
+           steps{
+               sh 'dotnet restore BlazorAppJenkins.sln'
+            }
+         }
     }
 }
