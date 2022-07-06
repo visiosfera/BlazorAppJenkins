@@ -24,7 +24,7 @@ pipeline {
          }
         stage('Publish'){
              steps{
-               sh 'dotnet publish BlazorAppJenkins/BlazorAppJenkins.csproj --configuration Release --no-restore'
+               sh 'dotnet publish BlazorAppJenkins/BlazorAppJenkins.csproj --configuration Release --no-restore -o /var/www/gerenciadorradioweb'
              }
         }
     }
